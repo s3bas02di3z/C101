@@ -7,7 +7,7 @@ from flask import Flask, jsonify, render_template, request
 from werkzeug.utils import secure_filename
 
 # Load model
-dt = joblib.load("dt1_ml.joblib")
+dt = joblib.load("dt1.joblib")
 # Create Flask App
 server = Flask(_name_)
 
