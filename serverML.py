@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 # Load model
 dt = joblib.load("dt1.joblib")
 # Create Flask App
-server = Flask(_name_)
+server = Flask(__name__)
 
 
 # Define route
@@ -22,5 +22,5 @@ def predictjson():
     return jsonify({"Prediction": str(result[0])})
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     server.run(debug=False, host="0.0.0.0", port=8080)
